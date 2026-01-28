@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://hajongho.github.io/gaeddong",
+  "homepage": "https://hjh9895-cmd.github.io/gaeddong",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
