@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserPlus, Utensils, Calendar, MapPin, ChevronRight, Smile } from 'lucide-react';
+import { UserPlus, Utensils, Calendar, MapPin, ChevronRight, Smile, Instagram } from 'lucide-react';
 
 const Home = ({ setCurrentPage }) => {
     return (
@@ -142,27 +142,45 @@ const Home = ({ setCurrentPage }) => {
                     </ul>
                 </div>
 
-                {/* 갤러리/활동사진 */}
-                <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-                    <div className="flex justify-between items-end mb-6">
-                        <h2 className="text-2xl font-bold text-gray-800">활동 사진</h2>
-                        <button className="text-sm text-gray-500 hover:text-green-600 flex items-center">인스타그램 <ChevronRight size={14} /></button>
+                {/* Instagram Feed */}
+                <a
+                    href="https://www.instagram.com/gaeddong.coop/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
+                >
+                    {/* Instagram gradient background on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+
+                    <div className="flex justify-between items-end mb-6 relative z-10">
+                        <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 flex items-center justify-center">
+                                <Instagram className="text-white" size={20} />
+                            </div>
+                            <div>
+                                <h2 className="text-2xl font-bold text-gray-800">Instagram</h2>
+                                <p className="text-xs text-gray-500">@gaeddong.coop</p>
+                            </div>
+                        </div>
+                        <button className="text-sm text-gray-500 group-hover:text-pink-600 flex items-center gap-1 transition-colors">
+                            팔로우 <ChevronRight size={14} />
+                        </button>
                     </div>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-2 gap-3 relative z-10">
                         <div className="aspect-square bg-gray-200 rounded-xl overflow-hidden">
-                            <img src="/assets/images/KakaoTalk_20260115_145310694.jpg" className="w-full h-full object-cover hover:scale-110 transition duration-500" />
+                            <img src="/assets/images/KakaoTalk_20260115_145310694.jpg" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Instagram post" />
                         </div>
                         <div className="aspect-square bg-gray-200 rounded-xl overflow-hidden">
-                            <img src="/assets/images/KakaoTalk_20260115_145310694_08.jpg" className="w-full h-full object-cover hover:scale-110 transition duration-500" />
+                            <img src="/assets/images/KakaoTalk_20260115_145310694_08.jpg" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Instagram post" />
                         </div>
                         <div className="aspect-square bg-gray-200 rounded-xl overflow-hidden">
-                            <img src="/assets/images/KakaoTalk_20260115_145310694_19.jpg" className="w-full h-full object-cover hover:scale-110 transition duration-500" />
+                            <img src="/assets/images/KakaoTalk_20260115_145310694_19.jpg" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Instagram post" />
                         </div>
                         <div className="aspect-square bg-gray-200 rounded-xl overflow-hidden">
-                            <img src="/assets/images/KakaoTalk_20260118_171126891_06.jpg" className="w-full h-full object-cover hover:scale-110 transition duration-500" />
+                            <img src="/assets/images/KakaoTalk_20260118_171126891_06.jpg" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Instagram post" />
                         </div>
                     </div>
-                </div>
+                </a>
             </section>
         </div>
     );
